@@ -5,7 +5,6 @@ from scapy.all import *
 class FeatureExtractor:
     def __init__(self):
         self.columns = ["packet_length", "ttl", "src_port", "dst_port"]
-gitch
     def extract(self, packet):
         try:
             length = len(packet)
