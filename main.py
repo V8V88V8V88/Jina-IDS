@@ -6,7 +6,7 @@ Network Intrusion Detection System - Main Entry Point
 import sys
 import os
 import argparse
-from PyQt5.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication
 
 from gui.app import IDSApplication
 from utils.config import load_config
@@ -14,13 +14,13 @@ from utils.logger import setup_logger
 
 def parse_arguments():
     """Parse command line arguments."""
-    parser = argparse.ArgumentParser(description='Network Intrusion Detection System')
-    parser.add_argument('--config', type=str, default='config.json', 
-                        help='Path to configuration file')
-    parser.add_argument('--debug', action='store_true', 
-                        help='Enable debug mode')
-    parser.add_argument('--no-gui', action='store_true',
-                        help='Run in console mode without GUI')
+    parser = argparse.ArgumentParser(description="Network Intrusion Detection System")
+    parser.add_argument("--config", type=str, default="config.json",
+                        help="Path to configuration file")
+    parser.add_argument("--debug", action="store_true",
+                        help="Enable debug mode")
+    parser.add_argument("--no-gui", action="store_true",
+                        help="Run in console mode without GUI")
     
     return parser.parse_args()
 
@@ -31,11 +31,11 @@ def main():
     
     # Setup paths
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    os.makedirs(os.path.join(base_dir, 'data', 'logs'), exist_ok=True)
-    os.makedirs(os.path.join(base_dir, 'data', 'models'), exist_ok=True)
+    os.makedirs(os.path.join(base_dir, "data", "logs"), exist_ok=True)
+    os.makedirs(os.path.join(base_dir, "data", "models"), exist_ok=True)
     
     # Setup logger
-    log_file = os.path.join(base_dir, 'data', 'logs', 'ids.log')
+    log_file = os.path.join(base_dir, "data", "logs", "ids.log")
     logger = setup_logger(log_file, debug=args.debug)
     logger.info("Starting Network Intrusion Detection System")
     
@@ -59,9 +59,9 @@ def main():
         from core.detector import IntrusionDetector
         
         # Initialize components
-        packet_capture = PacketCapture(config['capture'])
-        analyzer = TrafficAnalyzer(config['analysis'])
-        detector = IntrusionDetector(config['detection'])
+        packet_capture = PacketCapture(config["capture"])
+        analyzer = TrafficAnalyzer(config["analysis"])
+        detector = IntrusionDetector(config["detection"])
         
         # Start capturing and analyzing
         try:
@@ -91,7 +91,7 @@ def main():
         window = IDSApplication(config, base_dir, logger)
         window.show()
         
-        sys.exit(app.exec_())
+        sys.exit(app.exec())
 
 if __name__ == "__main__":
     main()
