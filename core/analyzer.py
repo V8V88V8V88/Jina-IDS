@@ -1,4 +1,4 @@
-from rule_engine import RuleEngine
+from core.rule_engine import RuleEngine
 from ml.predict import predict_packet
 
 class PacketAnalyzer:
@@ -9,4 +9,4 @@ class PacketAnalyzer:
         if self.rule_engine.check_packet(packet):
             print("Threat detected (rule-based)!")
         else:
-            predict_packet(packet)  # ML-based detection
+            predict_packet(packet)
