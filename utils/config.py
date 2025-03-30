@@ -9,5 +9,5 @@ def load_config(config_file="config.json"):
     return {
         "capture": {"interface": "eth0"},
         "analysis": {"threshold": 10},
-        "detection": {"rules": "data/rules/default_rules.json"
+        "detection": {"rules": "data/rules/default_rules.json"}
     }
