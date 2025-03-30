@@ -1,4 +1,4 @@
-# Network Intrusion Detection System (NIDS)
+# Jina: Network Intrusion Detection System (NIDS)
 
 A Python-based network intrusion detection system that can identify various network attacks and anomalies.
 
