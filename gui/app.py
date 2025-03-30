@@ -15,27 +15,22 @@ class IDSApplication(QMainWindow):
         self.setWindowTitle("Jina Network Analyzer")
         self.setGeometry(100, 100, 800, 600)
 
-        # Central widget
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
 
         layout = QVBoxLayout()
 
-        # Dashboard section
         self.dashboard = Dashboard()
         layout.addWidget(self.dashboard)
 
-        # Start Detection Button
         self.start_button = QPushButton("Start Detection")
         self.start_button.clicked.connect(self.start_detection)
         layout.addWidget(self.start_button)
 
-        # Generate Report Button
         self.report_button = QPushButton("Generate Report")
         self.report_button.clicked.connect(self.generate_report)
         layout.addWidget(self.report_button)
 
-        # Set Layout
         central_widget.setLayout(layout)
 
     def start_detection(self):

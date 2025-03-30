@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Network Intrusion Detection System - Main Entry Point
 """
@@ -26,20 +25,16 @@ def parse_arguments():
 
 def main():
     """Main entry point of the application."""
-    # Parse command line arguments
     args = parse_arguments()
     
-    # Setup paths
     base_dir = os.path.dirname(os.path.abspath(__file__))
     os.makedirs(os.path.join(base_dir, "data", "logs"), exist_ok=True)
     os.makedirs(os.path.join(base_dir, "data", "models"), exist_ok=True)
     
-    # Setup logger
     log_file = os.path.join(base_dir, "data", "logs", "ids.log")
     logger = setup_logger(log_file, debug=args.debug)
     logger.info("Starting Network Intrusion Detection System")
     
-    # Load configuration
     config_file = args.config
     if not os.path.isabs(config_file):
         config_file = os.path.join(base_dir, config_file)
@@ -53,22 +48,18 @@ def main():
         config = load_config(None)
     
     if args.no_gui:
-        # Run in console mode
         from core.packet_capture import PacketCapture
         from core.analyzer import TrafficAnalyzer
         from core.detector import IntrusionDetector
         
-        # Initialize components
         packet_capture = PacketCapture(config["capture"])
         analyzer = TrafficAnalyzer(config["analysis"])
         detector = IntrusionDetector(config["detection"])
         
-        # Start capturing and analyzing
         try:
             logger.info("Starting packet capture in console mode")
             packet_capture.start_capture()
             
-            # Main console loop
             while True:
                 packets = packet_capture.get_packets()
                 if packets:
@@ -84,7 +75,6 @@ def main():
             packet_capture.stop_capture()
             logger.info("Packet capture stopped")
     else:
-        # Run in GUI mode
         app = QApplication(sys.argv)
         app.setApplicationName("Network Intrusion Detection System")
         
