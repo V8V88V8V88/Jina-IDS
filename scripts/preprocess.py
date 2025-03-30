@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 
 # Load dataset
-df = pd.read_csv("cybersecurity_intrusion_data.csv")
+df = pd.read_csv("data/raw/cybersecurity_intrusion_data.csv")
 
 # Drop non-numeric or unnecessary columns
 df = df.drop(["session_id", "browser_type"], axis=1)
