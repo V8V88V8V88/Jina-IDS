@@ -1,6 +1,13 @@
-def get_config():
+import json
+import os
+
+def load_config(config_file="config.json"):
+    """Load configuration from a JSON file."""
+    if config_file and os.path.exists(config_file):
+        with open(config_file, "r") as file:
+            return json.load(file)
     return {
-        "interface": "eth0",
-        "log_dir": "data/logs/",
-        "model_dir": "data/models/"
+        "capture": {"interface": "eth0"},
+        "analysis": {"threshold": 10},
+        "detection": {"rules": "data/rules/default_rules.json"
     }
