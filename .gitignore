@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv
+
+# IDS Specific
+# Logs
+data/logs/*.log
+*.log
+
+# Models (keep structure, ignore large files)
+data/models/*.pkl
+data/models/*.h5
+data/models/*.joblib
+
+# Processed data
+data/processed_data.pkl
+data/scaler.pkl
+
+# Reports (keep directory, ignore generated reports)
+data/reports/*.pdf
+data/reports/*.html
+data/reports/*.json
+
+# Config (keep example, ignore actual)
+config.json
+!config.json.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# ML/AI
+*.pkl
+*.h5
+*.ckpt
+*.pt
+*.pth

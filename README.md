@@ -1,72 +1,51 @@
-# Jina: Network Intrusion Detection System (NIDS)
+# Jina IDS
 
-A Python-based network intrusion detection system that can identify various network attacks and anomalies.
+Network intrusion detection. Sniffs packets,and  spots attacks.
 
-## Features
+Built this to learn about IDS internals. It actually works, detects SQL injection, XSS, port scans, the usual stuff. Has an ML component too if you're into that.
 
-- Real-time network packet capture and analysis
-- Signature-based detection for known attack patterns
-- Anomaly-based detection using machine learning
-- GUI dashboard with real-time traffic visualization
-- Customizable alert system
-- Detailed attack reports and statistics
-- Rule-based detection engine
-- Export capability for logs and reports
+## Install
 
-## Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/nids_project.git
-   cd nids_project
-   ```
-
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Run the application:
-   ```
-   python main.py
-   ```
-
-## Usage
-
-### GUI Mode
-
-Simply run the application without any arguments to launch the GUI:
-```
-python main.py
+```bash
+pip install -r requirements.txt
 ```
 
-### Console Mode
+## Run
 
-Run the application with the `--no-gui` flag for headless operation:
-```
-python main.py --no-gui
-```
+```bash
+# for testing
+python main.py --test
 
-### Configuration
+# actually monitor traffic (need sudo)
+sudo python main.py --no-gui
 
-You can provide a custom configuration file:
-```
-python main.py --config my_config.json
-```
-
-### Debug Mode
-
-Enable debug logging with:
-```
-python main.py --debug
+# with gui
+sudo python main.py
 ```
 
-## System Requirements
+You'll need root for packet capture. That's just how it works.
 
-- Python 3.8 or higher
-- Administrative/root privileges (for packet capture)
-- Network interface in promiscuous mode (for monitoring network traffic)
+## What's in here
+
+- `core/` — packet capture, analysis, detection logic
+- `ml/` — xgboost anomaly detection
+- `gui/` — pyqt6 dashboard
+- `data/rules/` — detection signatures (json)
+
+## Adding rules
+
+Edit `data/rules/default_rules.json`. Format's pretty self-explanatory:
+
+```json
+{
+  "id": "SQLI-001",
+  "pattern": "union.*select",
+  "severity": "critical"
+}
+```
+
+Patterns are regex. Severity can be critical/high/medium/low.
 
 ## License
 
-This project is licensed under the GPLv2 License - see the LICENSE file for details.
+GPL v2

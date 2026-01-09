@@ -37,3 +37,65 @@
 [2025-03-30 16:29:08,191] [INFO] Starting Network Intrusion Detection System
 [2025-03-30 16:29:08,191] [INFO] Configuration loaded from /home/v8v88v8v88/Jina/config.json
 [2025-03-30 16:29:11,145] [INFO] Starting Network Threat Detection...
+[2026-01-09 20:05:23,954] [INFO] Starting Network Intrusion Detection System
+[2026-01-09 20:05:23,954] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:06:40,268] [INFO] Starting Network Intrusion Detection System
+[2026-01-09 20:06:40,268] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:13:50,161] [INFO] ==================================================
+[2026-01-09 20:13:50,162] [INFO] Jina IDS - Starting
+[2026-01-09 20:13:50,162] [INFO] Time: 2026-01-09T20:13:50.162296
+[2026-01-09 20:13:50,162] [INFO] ==================================================
+[2026-01-09 20:13:50,162] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:14:03,601] [INFO] ==================================================
+[2026-01-09 20:14:03,601] [INFO] Jina IDS - Starting
+[2026-01-09 20:14:03,601] [INFO] Time: 2026-01-09T20:14:03.601805
+[2026-01-09 20:14:03,601] [INFO] ==================================================
+[2026-01-09 20:20:43,756] [INFO] ==================================================
+[2026-01-09 20:20:43,756] [INFO] Jina IDS - Starting
+[2026-01-09 20:20:43,756] [INFO] Time: 2026-01-09T20:20:43.756428
+[2026-01-09 20:20:43,756] [INFO] ==================================================
+[2026-01-09 20:20:43,756] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:22:34,968] [INFO] ==================================================
+[2026-01-09 20:22:34,968] [INFO] Jina IDS - Starting
+[2026-01-09 20:22:34,968] [INFO] Time: 2026-01-09T20:22:34.968473
+[2026-01-09 20:22:34,968] [INFO] ==================================================
+[2026-01-09 20:22:34,968] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:29:24,065] [INFO] ==================================================
+[2026-01-09 20:29:24,065] [INFO] Jina IDS - Starting
+[2026-01-09 20:29:24,065] [INFO] Time: 2026-01-09T20:29:24.065871
+[2026-01-09 20:29:24,065] [INFO] ==================================================
+[2026-01-09 20:29:24,066] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:34:36,012] [INFO] ==================================================
+[2026-01-09 20:34:36,012] [INFO] Jina IDS - Starting
+[2026-01-09 20:34:36,012] [INFO] Time: 2026-01-09T20:34:36.012977
+[2026-01-09 20:34:36,013] [INFO] ==================================================
+[2026-01-09 20:34:36,013] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:39:18,556] [INFO] ==================================================
+[2026-01-09 20:39:18,556] [INFO] Jina IDS - Starting
+[2026-01-09 20:39:18,557] [INFO] Time: 2026-01-09T20:39:18.557014
+[2026-01-09 20:39:18,557] [INFO] ==================================================
+[2026-01-09 20:39:18,557] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:40:07,024] [INFO] ==================================================
+[2026-01-09 20:40:07,024] [INFO] Jina IDS - Starting
+[2026-01-09 20:40:07,024] [INFO] Time: 2026-01-09T20:40:07.024805
+[2026-01-09 20:40:07,024] [INFO] ==================================================
+[2026-01-09 20:40:07,025] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:44:22,731] [INFO] ==================================================
+[2026-01-09 20:44:22,732] [INFO] Jina IDS - Starting
+[2026-01-09 20:44:22,732] [INFO] Time: 2026-01-09T20:44:22.732280
+[2026-01-09 20:44:22,732] [INFO] ==================================================
+[2026-01-09 20:44:22,732] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:51:25,535] [INFO] ==================================================
+[2026-01-09 20:51:25,535] [INFO] Jina IDS - Starting
+[2026-01-09 20:51:25,535] [INFO] Time: 2026-01-09T20:51:25.535343
+[2026-01-09 20:51:25,535] [INFO] ==================================================
+[2026-01-09 20:51:25,535] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 20:51:26,314] [INFO] Starting Intrusion Detection System in console mode
+[2026-01-09 20:51:26,314] [INFO] Interface: wlo1
+[2026-01-09 21:07:48,585] [INFO] ==================================================
+[2026-01-09 21:07:48,585] [INFO] Jina IDS - Starting
+[2026-01-09 21:07:48,585] [INFO] Time: 2026-01-09T21:07:48.585947
+[2026-01-09 21:07:48,586] [INFO] ==================================================
+[2026-01-09 21:07:48,586] [INFO] Configuration loaded from /home/v8v88v8v88/Projects/Jina-IDS/config.json
+[2026-01-09 21:07:49,245] [INFO] Starting Intrusion Detection System in console mode
+[2026-01-09 21:07:49,245] [INFO] Interface: wlo1

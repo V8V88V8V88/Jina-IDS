@@ -1,0 +1,122 @@
+{
+  "version": "2.2.0",
+  "metadata": {
+    "name": "Jina IDS Detection Rules",
+    "description": "Tuned for minimal false positives - HTTP/plaintext only"
+  },
+  "signatures": {
+    "port_scan": {
+      "enabled": true,
+      "threshold": 30,
+      "time_window": 30,
+      "severity": "medium"
+    },
+    "syn_flood": {
+      "enabled": true,
+      "threshold": 300,
+      "time_window": 10,
+      "severity": "high"
+    }
+  },
+  "ip_blacklist": [],
+  "suspicious_ports": {
+    "malware": [
+      4444,
+      31337,
+      12345
+    ]
+  },
+  "protocol_anomalies": {
+    "http": {
+      "suspicious_user_agents": [
+        "sqlmap",
+        "nikto",
+        "nmap",
+        "masscan",
+        "gobuster",
+        "dirbuster"
+      ],
+      "max_uri_length": 4096
+    }
+  },
+  "payload_signatures": [
+    {
+      "id": "SQLI-UNION",
+      "name": "SQL Injection - UNION",
+      "pattern": "(?i)union\\s+(all\\s+)?select\\s+.{1,50}(from|password|user|admin|where)",
+      "severity": "critical",
+      "category": "web_attack",
+      "mitre_attack": "T1190"
+    },
+    {
+      "id": "SQLI-TAUTOLOGY",
+      "name": "SQL Injection - Tautology",
+      "pattern": "(?i)'\\s*(or|and)\\s+['\"]?1['\"]?\\s*=\\s*['\"]?1",
+      "severity": "critical",
+      "category": "web_attack",
+      "mitre_attack": "T1190"
+    },
+    {
+      "id": "XSS-SCRIPT",
+      "name": "XSS - Script Injection",
+      "pattern": "(?i)<script[^>]*>.*?(document\\.|alert\\(|eval\\()",
+      "severity": "high",
+      "category": "web_attack",
+      "mitre_attack": "T1059.007"
+    },
+    {
+      "id": "CMD-SEMICOLON",
+      "name": "Command Injection",
+      "pattern": "(?i);\\s*(cat|wget|curl|bash|sh|nc|python|perl|ruby|chmod|rm)\\s+",
+      "severity": "critical",
+      "category": "command_injection",
+      "mitre_attack": "T1059"
+    },
+    {
+      "id": "PATH-TRAV",
+      "name": "Path Traversal",
+      "pattern": "(\\.\\./){4,}(etc/|windows/|boot)",
+      "severity": "high",
+      "category": "file_access",
+      "mitre_attack": "T1083"
+    },
+    {
+      "id": "LOG4J",
+      "name": "Log4j JNDI",
+      "pattern": "(?i)\\$\\{jndi:(ldap|rmi|dns)://[^}]+\\}",
+      "severity": "critical",
+      "category": "vulnerability",
+      "mitre_attack": "T1190"
+    },
+    {
+      "id": "WEBSHELL",
+      "name": "PHP Webshell",
+      "pattern": "(?i)(eval|system|shell_exec|passthru)\\s*\\(\\s*\\$_(GET|POST|REQUEST)",
+      "severity": "critical",
+      "category": "malware",
+      "mitre_attack": "T1505.003"
+    },
+    {
+      "id": "REVSHELL",
+      "name": "Reverse Shell",
+      "pattern": "(?i)bash\\s+-i\\s+>&\\s*/dev/tcp/",
+      "severity": "critical",
+      "category": "malware",
+      "mitre_attack": "T1059"
+    }
+  ],
+  "network_signatures": [
+    {
+      "id": "XMAS-SCAN",
+      "name": "XMAS Scan",
+      "tcp_flags": "FIN,PSH,URG",
+      "severity": "high"
+    },
+    {
+      "id": "NULL-SCAN",
+      "name": "NULL Scan",
+      "tcp_flags": "NONE",
+      "severity": "high"
+    }
+  ]
+}
