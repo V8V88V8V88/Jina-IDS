@@ -69,4 +69,4 @@ python main.py --debug
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GPLv2 License - see the LICENSE file for details.
